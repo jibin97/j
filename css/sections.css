@@ -177,6 +177,14 @@ color .hero-description {
 .advantage-logo {
   max-width: 200px;
 }
+.advantage-1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.advantage-logo-div {
+  align-self: flex-start;
+}
 
 .tilt-container {
   perspective: 1000px;
@@ -225,7 +233,7 @@ color .hero-description {
   }
   .tilt-container {
     perspective: 1000px;
-    width: 84vw;
+    width: 70vw;
     height: 250px;
   }
   .hero {
