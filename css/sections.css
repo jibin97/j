@@ -180,8 +180,9 @@ color .hero-description {
 
 .tilt-container {
   perspective: 1000px;
-  width: 300px;
+  width: 500px;
   height: 250px;
+  rotate: -30deg;
 }
 
 .tilt-image {
@@ -189,7 +190,7 @@ color .hero-description {
   height: 100%;
   object-fit: contain;
   border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); */
   transition: transform 0.2s ease-out;
   transform-style: preserve-3d;
 }
@@ -222,7 +223,11 @@ color .hero-description {
     gap: var(--spacing-xl);
     margin-top: var(--spacing-xl);
   }
-
+  .tilt-container {
+    perspective: 1000px;
+    width: 84vw;
+    height: 250px;
+  }
   .hero {
     background-size: cover;
   }

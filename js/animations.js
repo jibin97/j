@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const tiltContainer = document.querySelector('.tilt-container');
+const tiltContainer = document.querySelector('.advantages');
 const tiltImage = document.querySelector('.tilt-image');
 
 tiltContainer.addEventListener('mousemove', (e) => {
@@ -61,8 +61,8 @@ tiltContainer.addEventListener('mousemove', (e) => {
     const mouseY = e.clientY - centerY;
 
     // Adjust these multipliers to control tilt intensity
-    const rotateX = (mouseY / (rect.height / 2)) * -15;
-    const rotateY = (mouseX / (rect.width / 2)) * 15;
+    const rotateX = (mouseY / (rect.height / 2)) * -30;
+    const rotateY = (mouseX / (rect.width / 2)) * 30;
 
     tiltImage.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 });
