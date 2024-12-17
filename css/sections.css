@@ -1,0 +1,239 @@
+/* Hero section */
+.hero {
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(4, 25, 46);
+  background-image: linear-gradient(
+      90deg,
+      rgba(4, 25, 46, 0) 18%,
+      rgba(255, 255, 255, 0) 50%,
+      rgb(4 25 46) 87%
+    ),
+    url(../assets/amekcover1.jpg),
+    linear-gradient(
+      90deg,
+      rgb(4 25 46) 18%,
+      rgba(255, 255, 255, 0) 50%,
+      rgb(4 25 46) 87%
+    );
+  background-size: inherit;
+  background-position: center;
+  color: white;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  min-height: 60vh;
+  align-content: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  line-height: 1.15;
+}
+.underline {
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.hero-description-container {
+  border-top: 5px solid var(--primary-color);
+  width: 52%;
+  padding-top: 5px;
+}
+color .hero-description {
+  text-align: justify;
+  font-size: larger;
+  line-height: 1.5;
+}
+
+/* Sockets section */
+.sockets {
+  padding: var(--spacing-xl) var(--spacing-md);
+  text-align: center;
+  background: var(--blue-gray);
+}
+
+.socket-items {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.socket-item {
+  position: relative;
+  transition: transform 0.3s ease;
+  justify-self: center;
+}
+
+.socket-item img {
+  display: block;
+  width: 160px;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.socket-item::after {
+  content: " ";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 170px;
+  height: 12px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.7315301120448179) 0%,
+    rgba(0, 0, 0, 0.9416141456582633) 27%,
+    rgba(0, 0, 0, 0) 98%
+  );
+  border-radius: 50%;
+  filter: blur(10px);
+  opacity: 1;
+  transition: opacity 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.socket-item:hover img {
+  transform: translateY(-30px);
+  /* box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); */
+}
+
+.socket-item:hover::after {
+  opacity: 0.6;
+  width: 200px;
+  height: 20px;
+}
+
+/* Features section */
+.features {
+  padding: var(--spacing-xl) var(--spacing-md);
+  background: var(--bg-light);
+}
+.features .container {
+  text-align: center;
+}
+.featues-heading {
+  border-bottom: 5px solid var(--primary-color);
+  display: inline-block;
+}
+.featues-heading p {
+  font-weight: 500;
+}
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.feature-card {
+  min-height: 400px;
+  flex: 1;
+  border-radius: var(--border-radius-lg);
+  background: var(--blue-gray);
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.feature-card img {
+  width: 100%;
+  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+}
+.feature-card div {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  text-align: left;
+}
+.feature-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Advantages section */
+.advantages {
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.advantages-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.advantage-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+.advantage-logo {
+  max-width: 200px;
+}
+
+.tilt-container {
+  perspective: 1000px;
+  width: 400px;
+  height: 250px;
+}
+
+.tilt-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-out;
+  transform-style: preserve-3d;
+}
+
+/* Testimonials section */
+.testimonials {
+  padding: var(--spacing-xl) var(--spacing-md);
+  background: var(--bg-light);
+}
+
+.testimonial {
+  max-width: 800px;
+  margin: var(--spacing-xl) auto;
+  padding: var(--spacing-lg);
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials-heading {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .hero-content {
+    padding: var(--spacing-md);
+  }
+  .socket-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+  }
+
+  .hero {
+    background-size: cover;
+  }
+  .advantages-content {
+    grid-template-columns: 1fr;
+  }
+  .hero-description-container {
+    width: 100%;
+  }
+  .hero h1 {
+    font-size: 2.3rem;
+    line-height: 1.15;
+  }
+}
